@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 venv/
 pycache/
 *.pycache
 .vscode/
 *.log
+=======
+__pycache__/
+*.pyc
+.vscode/
+.env/
+*.ipynb_checkpoints
+>>>>>>> 2b7a87a61cf9a78533c80bd025104bc9488d9e42
 *.csv
