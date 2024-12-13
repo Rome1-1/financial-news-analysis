@@ -9,7 +9,8 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
 # Load the dataset
 try:
-    news_data = pd.read_csv('../notebooks/raw_analyst_ratings.csv')  # Adjust path if necessary
+    news_data = pd.read_csv(r'C:\Users\teble\financial-news-analysis\notebooks\raw_analyst_ratings.csv')
+ # Adjust path if necessary
     logging.info("Dataset successfully loaded!")
 except FileNotFoundError:
     logging.error("The file 'raw_analyst_ratings.csv' was not found. Check the file path.")
@@ -104,7 +105,7 @@ logging.info(vectorizer.get_feature_names_out())
 news_data['publisher_domain'] = news_data['publisher'].str.extract(r'@([a-zA-Z0-9.-]+)')[0]
 logging.info("Publisher Domains:")
 logging.info(news_data['publisher_domain'].value_counts())
-
+t
 # Save publisher counts to CSV (optional)
 try:
     article_counts.to_csv('articles_per_publisher.csv', header=True)
